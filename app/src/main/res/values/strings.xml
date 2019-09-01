@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CariBuku</string>
+    <string name="poster">poster movie</string>
+    <string name="author">Author :</string>
+    <string name="search">Search</string>
+    <string name="about">About</string>
+    <string name="cari_buku">CariBuku</string>
+    <string name="rizky_alfikri">Rizky AlFikri</string>
+    <string name="rizkiingvalt_yahoo_co_id">rizkiingvalt@yahoo.co.id</string>
+</resources>
