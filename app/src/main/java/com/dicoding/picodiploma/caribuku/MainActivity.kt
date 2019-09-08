@@ -22,7 +22,6 @@ class MainActivity : BaseActivity<BookViewModel>() {
 
     private lateinit var bookAdapter: BookAdapter
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

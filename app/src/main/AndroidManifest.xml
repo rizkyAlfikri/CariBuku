@@ -14,9 +14,19 @@
             android:usesCleartextTraffic="true"
             tools:ignore="GoogleAppIndexingWarning"
             tools:targetApi="m">
-        <activity android:name=".AboutActivity"></activity>
-        <activity
-                android:name=".MainActivity">
+
+        <activity android:name=".DetailActivity" />
+
+        <activity android:name=".AboutActivity"
+                android:label="@string/aboutActivity"
+                android:parentActivityName=".MainActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity" />
+
+        </activity>
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

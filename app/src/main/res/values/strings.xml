@@ -7,4 +7,11 @@
     <string name="cari_buku">CariBuku</string>
     <string name="rizky_alfikri">Rizky AlFikri</string>
     <string name="rizkiingvalt_yahoo_co_id">rizkiingvalt@yahoo.co.id</string>
+    <string name="title">Title :</string>
+    <string name="publised_date">Publised Date :</string>
+    <string name="publisher">Publisher :</string>
+    <string name="description">Description</string>
+    <string name="detail_information">Detail Information</string>
+    <string name="detailActivity">detailActivity</string>
+    <string name="aboutActivity">aboutActivity</string>
 </resources>
