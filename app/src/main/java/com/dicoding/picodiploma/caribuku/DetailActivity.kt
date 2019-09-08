@@ -48,19 +48,24 @@ class DetailActivity : BaseActivity<BookViewModel>() {
     }
 
     private fun detailBookObserable(): Observer<MutableList<ItemsItem>> = Observer { it ->
-        it?.let {
+        it?.get(0)?.let {
             progressBar.visibility = View.GONE
-            txtTitle.text = it[0].volumeInfo.title
-            txtAuthors.text = it[0].volumeInfo.authors[0] ?: "-"
-            rattingBar.rating = it[0].volumeInfo.averageRating.toFloat()
-            txtPubliser.text = it[0].volumeInfo.publisher ?: "-"
-            txtPublisedDate.text = it[0].volumeInfo.publishedDate ?: "-"
-            txtInfo.text = it[0].searchInfo.textSnippet ?: "No description"
+            txtTitle.text = it.volumeInfo.title
+            txtAuthors.text = it.volumeInfo.authors[0] ?: "-"
+            rattingBar.rating = it.volumeInfo.averageRating.toFloat()
+            txtPubliser.text = it.volumeInfo.publisher ?: "-"
+            txtPublisedDate.text = it.volumeInfo.publishedDate ?: "-"
 
-            Glide.with(applicationContext).load(it[0].volumeInfo.imageLinks.thumbnail)
+            if (it.searchInfo != null && it.searchInfo.textSnippet != null) {
+                txtInfo.text = it.searchInfo.textSnippet
+            } else {
+                txtInfo.text = getString(R.string.no_desc)
+            }
+
+            Glide.with(applicationContext).load(it.volumeInfo.imageLinks.thumbnail)
                 .apply { RequestOptions() }.into(imgPhoto)
 
-            Glide.with(applicationContext).load(it[0].volumeInfo.imageLinks.thumbnail)
+            Glide.with(applicationContext).load(it.volumeInfo.imageLinks.thumbnail)
                 .apply { RequestOptions() }.into(imgBanner)
         }
     }

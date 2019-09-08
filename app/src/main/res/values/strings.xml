@@ -14,4 +14,6 @@
     <string name="detail_information">Detail Information</string>
     <string name="detailActivity">detailActivity</string>
     <string name="aboutActivity">aboutActivity</string>
+    <string name="no_desc">No description</string>
+    <string name="todo">TODO</string>
 </resources>

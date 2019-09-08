@@ -42,7 +42,7 @@ class BookAdapter(private val context: Context) : RecyclerView.Adapter<BookAdapt
                 .apply(RequestOptions()).into(imgTumbnail)
 
             cardView.setOnClickListener {
-                var intent = Intent(context, DetailActivity::class.java)
+                val intent = Intent(context, DetailActivity::class.java)
                 intent.putExtra(DetailActivity.EXTRA_BOOK, listBook?.get(position)?.id)
                 context.startActivity(intent)
             }
